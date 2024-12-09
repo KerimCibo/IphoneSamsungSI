@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items:  center;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+h1{
+    font-size: 100px;
+    color: aliceblue;
+    backdrop-filter: brightness(.5);
+    letter-spacing: 4px;
+}
+.btn{
+    background-color: black;
+    color: white;
+    padding: 20px 40px;
+    font-size: 25px;
+    border: 4px solid;
+    cursor: pointer;
+    transition: 1s background-color;
+    white-space: nowrap;
+}
+
+.btn:hover{
+    background-color: white;
+    color: black;
+}
+.split{
+    width: 50%;
+    height: 100%;
+top: 0;
+overflow: hidden;
+}
+
+.split.left{
+    position: absolute;
+    left: 0;
+    background-color: pink;
+    background-image: url("https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/121030-iphone-16-plus.png");
+    background-size: cover;
+}
+
+
+.split.right{
+    position: absolute;
+    right: 0;
+    background-color:  lightblue;
+    background-image: url("https://images.samsung.com/is/image/samsung/assets/pk/smartphones/galaxy-s24/buy/03_S24Series-Combo-KV_PC.jpg?imbypass=true");
+    background-size: cover;
+}
+
+.active-left .left{
+    width: 25%;
+}
+.active-right .left{
+    width:  25%;
+}
+.active-right .right{
+    width: 75%;
+}
+
+.left, .right{
+    transition: width 2s ease-in-out;
+}
